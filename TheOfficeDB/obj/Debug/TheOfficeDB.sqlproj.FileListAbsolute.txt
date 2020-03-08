@@ -17,3 +17,9 @@ C:\Users\Nimbus410\git\TheOfficeTrivia-Using-Sql\TheOfficeDB\obj\Debug\Model.xml
 C:\Users\Nimbus410\git\TheOfficeTrivia-Using-Sql\TheOfficeDB\obj\Debug\refactor.xml
 C:\Users\Nimbus410\git\TheOfficeTrivia-Using-Sql\TheOfficeDB\obj\Debug\postdeploy.sql
 C:\Users\Nimbus410\git\TheOfficeTrivia-Using-Sql\TheOfficeDB\obj\Debug\predeploy.sql
+C:\Users\Student\git\theofficetrivia-using-sql\TheOfficeDB\bin\Debug\TheOfficeDB.dacpac
+C:\Users\Student\git\theofficetrivia-using-sql\TheOfficeDB\bin\Debug\TheOfficeDB.dll
+C:\Users\Student\git\theofficetrivia-using-sql\TheOfficeDB\bin\Debug\TheOfficeDB.pdb
+C:\Users\Student\git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\TheOfficeDB.sqlprojAssemblyReference.cache
+C:\Users\Student\git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\TheOfficeDB.dll
+C:\Users\Student\git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\TheOfficeDB.pdb

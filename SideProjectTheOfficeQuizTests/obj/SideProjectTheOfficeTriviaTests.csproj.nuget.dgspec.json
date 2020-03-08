@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nimbus410\\Desktop\\TheOfficeTrivia-Using-Sql\\SideProjectTheOfficeQuizTests\\SideProjectTheOfficeTriviaTests.csproj": {}
+    "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuizTests\\SideProjectTheOfficeTriviaTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nimbus410\\Desktop\\TheOfficeTrivia-Using-Sql\\SideProjectTheOfficeQuizTests\\SideProjectTheOfficeTriviaTests.csproj": {
+    "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuizTests\\SideProjectTheOfficeTriviaTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nimbus410\\Desktop\\TheOfficeTrivia-Using-Sql\\SideProjectTheOfficeQuizTests\\SideProjectTheOfficeTriviaTests.csproj",
+        "projectUniqueName": "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuizTests\\SideProjectTheOfficeTriviaTests.csproj",
         "projectName": "SideProjectTheOfficeTriviaTests",
-        "projectPath": "C:\\Users\\Nimbus410\\Desktop\\TheOfficeTrivia-Using-Sql\\SideProjectTheOfficeQuizTests\\SideProjectTheOfficeTriviaTests.csproj",
-        "packagesPath": "C:\\Users\\Nimbus410\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nimbus410\\Desktop\\TheOfficeTrivia-Using-Sql\\SideProjectTheOfficeQuizTests\\obj\\",
+        "projectPath": "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuizTests\\SideProjectTheOfficeTriviaTests.csproj",
+        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuizTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nimbus410\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -31,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Nimbus410\\Desktop\\TheOfficeTrivia-Using-Sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj": {
-                "projectPath": "C:\\Users\\Nimbus410\\Desktop\\TheOfficeTrivia-Using-Sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj"
+              "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj": {
+                "projectPath": "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj"
               }
             }
           }
@@ -78,26 +77,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Nimbus410\\Desktop\\TheOfficeTrivia-Using-Sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj": {
+    "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nimbus410\\Desktop\\TheOfficeTrivia-Using-Sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj",
+        "projectUniqueName": "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj",
         "projectName": "SideProjectTheOfficeQuiz",
-        "projectPath": "C:\\Users\\Nimbus410\\Desktop\\TheOfficeTrivia-Using-Sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj",
-        "packagesPath": "C:\\Users\\Nimbus410\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nimbus410\\Desktop\\TheOfficeTrivia-Using-Sql\\SideProjectTheOfficeQuiz\\obj\\",
+        "projectPath": "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj",
+        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuiz\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nimbus410\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -156,7 +154,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
