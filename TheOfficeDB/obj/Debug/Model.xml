@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="TheOfficeDB.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\NIMBUS410\GIT\THEOFFICETRIVIA-USING-SQL\THEOFFICEDB\OBJ\DEBUG\THEOFFICEDB.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\CJOUR\DOCUMENTS\GIT\THEOFFICETRIVIA-USING-SQL\THEOFFICEDB\OBJ\DEBUG\THEOFFICEDB.DLL" />
 			<Metadata Name="AssemblyName" Value="TheOfficeDB" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Nimbus410\git\TheOfficeTrivia-Using-Sql\TheOfficeDB\obj\Debug\TheOfficeDB.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\TheOfficeDB.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>

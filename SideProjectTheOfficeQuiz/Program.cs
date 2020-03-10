@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using SideProjectTheOfficeQuiz.ConsoleModels;
+using SideProjectTheOfficeQuiz.DAL;
 using SideProjectTheOfficeQuiz.Models;
 using SideProjectTheOfficeQuiz.Views;
-using SideProjectTheOfficeTrivia.DAL;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,16 +11,19 @@ namespace SideProjectTheOfficeQuiz
 {
     class Program
     {
-        private static Dictionary<TriviaC, double?> quizzes = new Dictionary<TriviaC, double?>()
-        {
-            { TriviaOptions.DunderMifflin, null},
-            { TriviaOptions.RegionalManagers, null},
-            { TriviaOptions.Sales, null},
-            { TriviaOptions.TheAnnex, null},
-            { TriviaOptions.Corporate, null},
-        };
+        static ITriviaSqlDAO triviaDAO;
 
 
+        //private static Dictionary<Trivia, double?> quizzes = new Dictionary<Trivia, double?>()
+        //{
+        //    { TriviaOptions.DunderMifflin, null },
+        //    { TriviaOptions.RegionalManagers, null},
+        //    { TriviaOptions.Sales, null},
+        //    { TriviaOptions.TheAnnex, null},
+        //    { TriviaOptions.Corporate, null}
+        //};
+        
+        
         static void Main(string[] args)
         {
             // Get the connection string from the appsettings.json file
@@ -32,7 +35,9 @@ namespace SideProjectTheOfficeQuiz
 
             string connectionString = configuration.GetConnectionString("TheOfficeDB");
             
-            ITriviaSqlDAO triviaDAO = new TriviaSqlDAO(connectionString);
+            triviaDAO = new TriviaSqlDAO(connectionString);
+            IQuestionSqlDAO questionDAO = new QuestionSqlDAO(connectionString);
+            IMCAnswerSqlDAO mcAnswerDAO = new MCAnswerSqlDAO(connectionString);
 
             SelectAQuiz();
 
@@ -54,7 +59,8 @@ namespace SideProjectTheOfficeQuiz
 
                 // Show the user the list of quizzes
                 //Print each quiz
-                Dictionary<int, TriviaC> choices = new Dictionary<int, TriviaC>();
+                Dictionary<int, string> choices = new Dictionary<int, string>(); // Working version - no score tracking
+                //Dictionary<int, Tuple<string, double?>> choices = new Dictionary<int, Tuple<string, double?>>(); // Testing to see if it adds score on
                 int choice = 1;
                 Console.WriteLine(@"
   _____ _             ___   __  __ _            _____     _       _       
@@ -65,21 +71,24 @@ namespace SideProjectTheOfficeQuiz
                 Console.WriteLine();
                 //Console.WriteLine($"{"Options",10}{"Score",44}");
                 //Console.WriteLine("=========================================================");
-                Console.WriteLine($"{"Options",18}{"Score",43}"); // Have 3 equals signs on each side
+                Console.WriteLine($"{"Options",19}{"Score",43}"); // Have 3 equals signs on each side
                 Console.WriteLine($"{"========================================================",64}"); // This indentation is good
-                foreach (KeyValuePair<TriviaC, double?> kvp in quizzes)
+                IList<string> trivias = triviaDAO.GetAllTriviaTypes();
+                string scoreString = "";
+                foreach (string triviaName in trivias)
                 {
-                    TriviaC quiz = kvp.Key;
-                    choices.Add(choice, quiz);
-                    string scoreString = "---";
-                    double? score = kvp.Value;
+                    //double? score = null;
+                    //Tuple<string, double?> t = new Tuple<string, double?>(triviaName, score);
+                    //choices.Add(choice, t);
+                    choices.Add(choice, triviaName); // Working version
+                    scoreString = "---";
+                    double? score = null;
                     if (score.HasValue)
                     {
                         scoreString = $"{Math.Round(score.Value)}%";
                     }
-                    Console.WriteLine($"{choice,13}) {quiz.Name,-40} {scoreString,5}");
+                    Console.WriteLine($"{choice,13}) {triviaName,-40} {scoreString,5}");
                     choice++;
-
                 }
 
                 // Allow user to select one to take
@@ -109,11 +118,12 @@ namespace SideProjectTheOfficeQuiz
 
                 }
                 // Ok, take the quiz
-                TriviaC quizToTake = choices[selection];
-                TriviaTaker quizTaker = new TriviaTaker(quizToTake);
-                quizTaker.TakeQuiz(true);
+                Trivia triviaToTake = triviaDAO.GetTrivia(choices[selection]); // This works
+                TriviaTaker triviaTaker = new TriviaTaker(triviaToTake);
+                triviaTaker.TakeTrivia(true);
                 // Record the score
-                quizzes[quizToTake] = quizToTake.Score;
+                //quizzes[triviaToTake] = triviaToTake.Score; // NEED TO FIGURE OUT
+                // need to pull this score = triviaToTake.Score;
 
                 Console.ReadLine();
             }

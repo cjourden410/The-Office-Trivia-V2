@@ -23,3 +23,12 @@ C:\Users\Student\git\theofficetrivia-using-sql\TheOfficeDB\bin\Debug\TheOfficeDB
 C:\Users\Student\git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\TheOfficeDB.sqlprojAssemblyReference.cache
 C:\Users\Student\git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\TheOfficeDB.dll
 C:\Users\Student\git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\TheOfficeDB.pdb
+C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\TheOfficeDB\bin\Debug\TheOfficeDB.dacpac
+C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\TheOfficeDB\bin\Debug\TheOfficeDB.dll
+C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\TheOfficeDB\bin\Debug\TheOfficeDB.pdb
+C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\Model.xml
+C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\refactor.xml
+C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\postdeploy.sql
+C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\predeploy.sql
+C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\TheOfficeDB.dll
+C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\TheOfficeDB.pdb

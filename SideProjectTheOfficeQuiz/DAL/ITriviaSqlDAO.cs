@@ -1,10 +1,12 @@
 ﻿using SideProjectTheOfficeQuiz.Models;
 using System.Collections.Generic;
 
-namespace SideProjectTheOfficeTrivia.DAL
+namespace SideProjectTheOfficeQuiz.DAL
 {
     public interface ITriviaSqlDAO
     {
-        IList<Trivia> GetAllTriviaTypes();
+        IList<string> GetAllTriviaTypes();
+
+        Trivia GetTrivia(string name);
     }
 }

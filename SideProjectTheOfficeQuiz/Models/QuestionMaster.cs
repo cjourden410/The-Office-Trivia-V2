@@ -6,8 +6,8 @@ namespace SideProjectTheOfficeQuiz.Models
 {
     abstract public class QuestionMaster
     {
-        public string QuestionText { get; }
-        public string CorrectResponse { get; }
+        public string QuestionText { get; set; }
+        public string CorrectResponse { get; set; }
         public bool IsCaseSensitive { get; }
 
         virtual public string QuestionToDisplay
@@ -32,6 +32,11 @@ namespace SideProjectTheOfficeQuiz.Models
         }
         public double Correctness { get; set; } // 0.0 to 1.0 scale to allow for partial credit
         public bool IsComplete { get; private set; }
+
+        public QuestionMaster()
+        {
+
+        }
 
         public QuestionMaster(string questionText, string correctResponse, bool isCaseSensitive)
         {

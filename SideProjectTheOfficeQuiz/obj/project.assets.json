@@ -677,23 +677,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Student\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\cjour\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj",
+      "projectUniqueName": "C:\\Users\\cjour\\Documents\\Git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj",
       "projectName": "SideProjectTheOfficeQuiz",
-      "projectPath": "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj",
-      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Student\\git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuiz\\obj\\",
+      "projectPath": "C:\\Users\\cjour\\Documents\\Git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuiz\\SideProjectTheOfficeQuiz.csproj",
+      "packagesPath": "C:\\Users\\cjour\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cjour\\Documents\\Git\\theofficetrivia-using-sql\\SideProjectTheOfficeQuiz\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cjour\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -753,7 +749,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

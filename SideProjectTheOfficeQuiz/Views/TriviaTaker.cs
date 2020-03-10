@@ -1,4 +1,5 @@
 ﻿using SideProjectTheOfficeQuiz.ConsoleModels;
+using SideProjectTheOfficeQuiz.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,27 +8,27 @@ namespace SideProjectTheOfficeQuiz.Views
 {
     public class TriviaTaker
     {
-        private TriviaC quiz;
+        private Trivia trivia;
 
-        public TriviaTaker(TriviaC quiz)
+        public TriviaTaker(Trivia trivia)
         {
-            if (quiz == null)
+            if (trivia == null)
             {
                 throw new NullReferenceException("You must pass a Quiz into QuizTaker");
             }
-            this.quiz = quiz;
+            this.trivia = trivia;
         }
 
-        public void TakeQuiz(bool immediateFeedback)
+        public void TakeTrivia(bool immediateFeedback)
         {
             Console.Clear();
 
-            Console.WriteLine(quiz.Name);
+            Console.WriteLine(trivia.Name);
             Console.WriteLine("Press ENTER to begin...");
             Console.ReadLine();
 
             int questionNumber = 1;
-            foreach (QuestionC question in quiz.Questions)
+            foreach (QuestionMaster question in trivia.Questions)
             {
                 Console.Clear();
                 Console.Write($"{questionNumber}) ");
@@ -62,7 +63,7 @@ namespace SideProjectTheOfficeQuiz.Views
                     questionNumber++;
                 }
             }
-            Console.WriteLine($"You have finished the Quiz. Your score was {Math.Round(quiz.Score)}%");
+            Console.WriteLine($"Your score was {Math.Round(trivia.Score)}%");
         }
     }
 }
