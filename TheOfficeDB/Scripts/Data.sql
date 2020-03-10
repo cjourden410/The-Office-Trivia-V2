@@ -1,14 +1,14 @@
 ﻿Use TheOfficeDB
 Delete from MCAnswer
-Delete from Question
 Delete from Trivia_Question
+Delete from Question
 Delete from Trivia
 
 Insert Trivia (name)
 Values ('Dunder Mifflin'),
 ('Regional Managers'),
 ('Sales'),
-('The Annex'),
+('The Annex and Accounting'),
 ('Corporate');
 
 Insert Question (question_id, text)
@@ -166,9 +166,9 @@ Values (18, 'What was the name Jim used for his “The Ultimate Guide to Throwin
 Insert MCAnswer (choice, question_id, is_correct)
 Values ('Jim Prankerington', 18, 0),
 ('Jim Trickerington', 18, 0),
-('Jim Prankington', 18, 0),
+('James Prankington', 18, 0),
 ('Jimothy Prankston', 18, 0),
-('Jim Trickington', 18, 1);
+('James Trickington', 18, 1);
 
 Insert Question (question_id, text)
 Values (19, 'What does Todd Packer’s vanity license plate say?');
@@ -262,10 +262,10 @@ Values ('Michigan', 28, 0),
 Insert Question (question_id, text)
 Values (29, 'What is the name of Kevin’s band?');
 Insert MCAnswer (choice, question_id, is_correct)
-Values ('Net Present Value', 29, 1),
+Values ('Net Present Value', 29, 0),
 ('Be Audit You Can Be', 29, 0),
 ('Kevin and the Zits', 29, 0),
-('Scrantonicity', 29, 0),
+('Scrantonicity', 29, 1),
 ('LIFO', 29, 0);
 
 Insert Question (question_id, text)
@@ -341,7 +341,6 @@ Values ('DMI', 37, 1),
 Insert Trivia_Question (trivia_id, question_id)
 Values ((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 1)),
 ((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 2)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 3)),
 ((select trivia_id from trivia where name = 'Regional Managers'), (select question_id from Question where question_id = 3)),
 ((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 4)),
 ((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 5)),
@@ -353,30 +352,6 @@ Values ((select trivia_id from trivia where name = 'Dunder Mifflin'), (select qu
 ((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 11)),
 ((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 12)),
 ((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 13)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 14)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 15)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 16)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 17)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 18)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 19)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 20)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 21)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 22)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 23)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 24)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 25)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 26)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 27)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 28)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 29)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 30)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 31)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 32)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 33)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 34)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 35)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 36)),
-((select trivia_id from trivia where name = 'Dunder Mifflin'), (select question_id from Question where question_id = 37)),
 ((select trivia_id from trivia where name = 'Regional Managers'), (select question_id from Question where question_id = 14)),
 ((select trivia_id from trivia where name = 'Regional Managers'), (select question_id from Question where question_id = 15)),
 ((select trivia_id from trivia where name = 'Regional Managers'), (select question_id from Question where question_id = 16)),
@@ -387,14 +362,14 @@ Values ((select trivia_id from trivia where name = 'Dunder Mifflin'), (select qu
 ((select trivia_id from trivia where name = 'Sales'), (select question_id from Question where question_id = 21)),
 ((select trivia_id from trivia where name = 'Sales'), (select question_id from Question where question_id = 22)),
 ((select trivia_id from trivia where name = 'Sales'), (select question_id from Question where question_id = 23)),
-((select trivia_id from trivia where name = 'The Annex'), (select question_id from Question where question_id = 24)),
-((select trivia_id from trivia where name = 'The Annex'), (select question_id from Question where question_id = 25)),
-((select trivia_id from trivia where name = 'The Annex'), (select question_id from Question where question_id = 26)),
-((select trivia_id from trivia where name = 'The Annex'), (select question_id from Question where question_id = 27)),
-((select trivia_id from trivia where name = 'The Annex'), (select question_id from Question where question_id = 28)),
-((select trivia_id from trivia where name = 'The Annex'), (select question_id from Question where question_id = 29)),
-((select trivia_id from trivia where name = 'The Annex'), (select question_id from Question where question_id = 30)),
-((select trivia_id from trivia where name = 'The Annex'), (select question_id from Question where question_id = 31)),
+((select trivia_id from trivia where name = 'The Annex and Accounting'), (select question_id from Question where question_id = 24)),
+((select trivia_id from trivia where name = 'The Annex and Accounting'), (select question_id from Question where question_id = 25)),
+((select trivia_id from trivia where name = 'The Annex and Accounting'), (select question_id from Question where question_id = 26)),
+((select trivia_id from trivia where name = 'The Annex and Accounting'), (select question_id from Question where question_id = 27)),
+((select trivia_id from trivia where name = 'The Annex and Accounting'), (select question_id from Question where question_id = 28)),
+((select trivia_id from trivia where name = 'The Annex and Accounting'), (select question_id from Question where question_id = 29)),
+((select trivia_id from trivia where name = 'The Annex and Accounting'), (select question_id from Question where question_id = 30)),
+((select trivia_id from trivia where name = 'The Annex and Accounting'), (select question_id from Question where question_id = 31)),
 ((select trivia_id from trivia where name = 'Corporate'), (select question_id from Question where question_id = 32)),
 ((select trivia_id from trivia where name = 'Corporate'), (select question_id from Question where question_id = 33)),
 ((select trivia_id from trivia where name = 'Corporate'), (select question_id from Question where question_id = 34)),
