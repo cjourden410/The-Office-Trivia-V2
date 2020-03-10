@@ -6,24 +6,16 @@ using SideProjectTheOfficeQuiz.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace SideProjectTheOfficeQuiz
 {
     class Program
     {
         static ITriviaSqlDAO triviaDAO;
+        static double? score = null;
+        static Dictionary<string, double?> triviaDictionary = new Dictionary<string, double?>();
 
-
-        //private static Dictionary<Trivia, double?> quizzes = new Dictionary<Trivia, double?>()
-        //{
-        //    { TriviaOptions.DunderMifflin, null },
-        //    { TriviaOptions.RegionalManagers, null},
-        //    { TriviaOptions.Sales, null},
-        //    { TriviaOptions.TheAnnex, null},
-        //    { TriviaOptions.Corporate, null}
-        //};
-        
-        
         static void Main(string[] args)
         {
             // Get the connection string from the appsettings.json file
@@ -36,8 +28,6 @@ namespace SideProjectTheOfficeQuiz
             string connectionString = configuration.GetConnectionString("TheOfficeDB");
             
             triviaDAO = new TriviaSqlDAO(connectionString);
-            IQuestionSqlDAO questionDAO = new QuestionSqlDAO(connectionString);
-            IMCAnswerSqlDAO mcAnswerDAO = new MCAnswerSqlDAO(connectionString);
 
             SelectAQuiz();
 
@@ -59,8 +49,7 @@ namespace SideProjectTheOfficeQuiz
 
                 // Show the user the list of quizzes
                 //Print each quiz
-                Dictionary<int, string> choices = new Dictionary<int, string>(); // Working version - no score tracking
-                //Dictionary<int, Tuple<string, double?>> choices = new Dictionary<int, Tuple<string, double?>>(); // Testing to see if it adds score on
+                Dictionary<int, string> choices = new Dictionary<int, string>();
                 int choice = 1;
                 Console.WriteLine(@"
   _____ _             ___   __  __ _            _____     _       _       
@@ -75,14 +64,41 @@ namespace SideProjectTheOfficeQuiz
                 Console.WriteLine($"{"========================================================",64}"); // This indentation is good
                 IList<string> trivias = triviaDAO.GetAllTriviaTypes();
                 string scoreString = "";
-                foreach (string triviaName in trivias)
+                foreach (string t in trivias) // developed foreach loop to populate our dictionary of trivia to be able to track scores on main menu
                 {
-                    //double? score = null;
-                    //Tuple<string, double?> t = new Tuple<string, double?>(triviaName, score);
-                    //choices.Add(choice, t);
+                    if(triviaDictionary.ContainsKey(t))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        triviaDictionary[t] = null;
+                    }
+                }
+                #region Working code but not updating score
+                //foreach (string triviaName in trivias)
+                //{
+                //    //double? score = null;
+                //    //Tuple<string, double?> t = new Tuple<string, double?>(triviaName, score);
+                //    //choices.Add(choice, t);
+                //    choices.Add(choice, triviaName); // Working version
+                //    scoreString = "---";
+                //    //double? score = null;
+                //    if (score.HasValue)
+                //    {
+                //        scoreString = $"{Math.Round(score.Value)}%";
+                //    }
+                //    Console.WriteLine($"{choice,13}) {triviaName,-40} {scoreString,5}");
+                //    choice++;
+                //}
+                #endregion
+                #region Updated code to track scores properly
+                foreach (KeyValuePair<string, double?> kvp in triviaDictionary)
+                {
+                    string triviaName = kvp.Key;
                     choices.Add(choice, triviaName); // Working version
                     scoreString = "---";
-                    double? score = null;
+                    double? score = kvp.Value;
                     if (score.HasValue)
                     {
                         scoreString = $"{Math.Round(score.Value)}%";
@@ -90,7 +106,7 @@ namespace SideProjectTheOfficeQuiz
                     Console.WriteLine($"{choice,13}) {triviaName,-40} {scoreString,5}");
                     choice++;
                 }
-
+                #endregion
                 // Allow user to select one to take
                 bool validSelection = false;
                 int selection = 0;
@@ -122,8 +138,9 @@ namespace SideProjectTheOfficeQuiz
                 TriviaTaker triviaTaker = new TriviaTaker(triviaToTake);
                 triviaTaker.TakeTrivia(true);
                 // Record the score
-                //quizzes[triviaToTake] = triviaToTake.Score; // NEED TO FIGURE OUT
-                // need to pull this score = triviaToTake.Score;
+                string triviaTaken = triviaToTake.Name;
+                triviaDictionary[triviaTaken] = triviaToTake.Score; // NEED TO FIGURE OUT
+                //score = triviaToTake.Score; // makes all lines the same score
 
                 Console.ReadLine();
             }
