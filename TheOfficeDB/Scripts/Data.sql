@@ -197,7 +197,7 @@ Values ('The Longest Time', 21, 1),
 ('Shout', 21, 0);
 
 Insert Question (question_id, text)
-Values (22, 'When staying at The Schrute Farms Bed and Breakfast, what did Jim say were the changes that he and Pam would be murdered?');
+Values (22, 'When staying at The Schrute Farms Bed and Breakfast, what did Jim say were the chances that he and Pam would be murdered?');
 Insert MCAnswer (choice, question_id, is_correct)
 Values ('3 in 10', 22, 0),
 ('1 in 3', 22, 0),
