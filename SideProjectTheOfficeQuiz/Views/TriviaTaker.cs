@@ -1,8 +1,5 @@
-﻿using SideProjectTheOfficeQuiz.ConsoleModels;
-using SideProjectTheOfficeQuiz.Models;
+﻿using SideProjectTheOfficeQuiz.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SideProjectTheOfficeQuiz.Views
 {

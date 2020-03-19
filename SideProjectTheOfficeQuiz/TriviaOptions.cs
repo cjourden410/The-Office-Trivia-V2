@@ -1,9 +1,6 @@
-﻿using SideProjectTheOfficeQuiz.ConsoleModels;
-using SideProjectTheOfficeQuiz.DAL;
-using SideProjectTheOfficeQuiz.Models;
+﻿using SideProjectTheOfficeQuiz.Models;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace SideProjectTheOfficeQuiz
 {

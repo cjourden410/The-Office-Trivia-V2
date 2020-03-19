@@ -99,3 +99,4 @@ C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\SideProjectTheOfficeQuiz\
 C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\SideProjectTheOfficeQuiz\obj\Debug\netcoreapp3.1\SideProjectTheOfficeQuiz.csproj.CopyComplete
 C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\SideProjectTheOfficeQuiz\obj\Debug\netcoreapp3.1\SideProjectTheOfficeQuiz.csprojAssemblyReference.cache
 C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\SideProjectTheOfficeQuiz\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Nimbus410\git\theofficetrivia-using-sql\SideProjectTheOfficeQuiz\bin\Debug\netcoreapp3.1\appsettings.json

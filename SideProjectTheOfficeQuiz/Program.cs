@@ -1,12 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
-using SideProjectTheOfficeQuiz.ConsoleModels;
 using SideProjectTheOfficeQuiz.DAL;
 using SideProjectTheOfficeQuiz.Models;
 using SideProjectTheOfficeQuiz.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 namespace SideProjectTheOfficeQuiz
 {
