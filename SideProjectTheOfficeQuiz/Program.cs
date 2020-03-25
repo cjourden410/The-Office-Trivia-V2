@@ -11,7 +11,6 @@ namespace SideProjectTheOfficeQuiz
     class Program
     {
         static ITriviaSqlDAO triviaDAO;
-        static double? score = null;
         static Dictionary<string, double?> triviaDictionary = new Dictionary<string, double?>();
 
         static void Main(string[] args)
@@ -132,13 +131,12 @@ namespace SideProjectTheOfficeQuiz
 
                 }
                 // Ok, take the quiz
-                Trivia triviaToTake = triviaDAO.GetTrivia(choices[selection]); // This works
+                Trivia triviaToTake = triviaDAO.GetTrivia(choices[selection]);
                 TriviaTaker triviaTaker = new TriviaTaker(triviaToTake);
                 triviaTaker.TakeTrivia(true);
                 // Record the score
                 string triviaTaken = triviaToTake.Name;
-                triviaDictionary[triviaTaken] = triviaToTake.Score; // NEED TO FIGURE OUT
-                //score = triviaToTake.Score; // makes all lines the same score
+                triviaDictionary[triviaTaken] = triviaToTake.Score;
 
                 Console.ReadLine();
             }
