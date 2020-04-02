@@ -27,7 +27,7 @@ namespace SideProjectTheOfficeQuiz.DAL
                     conn.Open();
 
                     string sql =
-@"SELECT name from trivia";
+                        @"SELECT name from trivia";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     SqlDataReader rdr = cmd.ExecuteReader();
 
@@ -55,13 +55,13 @@ namespace SideProjectTheOfficeQuiz.DAL
                     conn.Open();
 
                     string sql =
-@"select q.question_id, q.text, a.choice, a.is_correct 
-from question q
-join Trivia_Question tq on q.question_id = tq.question_id
-join trivia t on tq.trivia_id = t.trivia_id
-join MCAnswer a on q.question_id = a.question_id
-where t.name = @name
-order by q.question_id";
+                        @"select q.question_id, q.text, a.choice, a.is_correct 
+                        from question q
+                        join Trivia_Question tq on q.question_id = tq.question_id
+                        join trivia t on tq.trivia_id = t.trivia_id
+                        join MCAnswer a on q.question_id = a.question_id
+                        where t.name = @name
+                        order by q.question_id";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@name", name);
                     SqlDataReader rdr = cmd.ExecuteReader();

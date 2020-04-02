@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0">
+  <Operation Name="Rename Refactor" Key="f8727276-fc17-4371-8fa5-1a99c9fc55e4" ChangeDateTime="03/07/2020 16:19:19" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Trivia].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Trivia]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="trivia_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9bcebebf-5847-4fc0-b78e-d1ad42b85e14" ChangeDateTime="03/07/2020 16:20:12" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Question].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Question]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="question_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5f3d77db-42af-4cf3-aaeb-b5465d9a4843" ChangeDateTime="03/07/2020 16:20:51" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[MCAnswer].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MCAnswer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="answer_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2ea6ff86-70a9-41cd-abd3-ba9baba4fe81" ChangeDateTime="03/07/2020 16:31:50" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Trivia_Question].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Trivia_Question]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="trivia_id" />
+  </Operation>
+</Operations>

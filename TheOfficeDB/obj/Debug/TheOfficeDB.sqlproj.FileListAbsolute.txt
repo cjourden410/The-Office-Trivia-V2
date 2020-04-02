@@ -29,3 +29,7 @@ C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\pre
 C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\TheOfficeDB.dll
 C:\Users\cjour\Documents\Git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\TheOfficeDB.pdb
 C:\Users\Nimbus410\git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\TheOfficeDB.sqlprojAssemblyReference.cache
+C:\Users\Nimbus410\git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\Model.xml
+C:\Users\Nimbus410\git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\refactor.xml
+C:\Users\Nimbus410\git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\postdeploy.sql
+C:\Users\Nimbus410\git\theofficetrivia-using-sql\TheOfficeDB\obj\Debug\predeploy.sql
